@@ -6,14 +6,14 @@
 // @author       myc
 // @match        https://www.ting22.com/*
 // @grant        none
+// @updateURL    https://github.com/chaochaoxiaoren/myc-tampermonkey-js/blob/main/onload.js
 // ==/UserScript==
 
 (function() {
     'use strict';
 
     // Your code here...
-    window.addEventListener('onload',function(){
-      console.log('window load');
-      window.focus();
-    })
+    var playBtn = document.getElementsByClassName('jp-play');
+    var myEvent = new Event('click');
+    playBtn.dispatchEvent(myEvent);
 })();
